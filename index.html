@@ -13,39 +13,44 @@
   <link href="https://fonts.googleapis.com/css2?family=Playball&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="shortcut icon" href="pngwing.com.png" type="image/x-icon">
-  <title>K-flix</title>
+  <title>Kflix</title>
 </head>
 <body>
   <div id="loader"></div>
   <span id="content">
 
     <header id="header">
-    <nav class="navbar navbar-expand-lg navbar-dark shadow-5-strong" id="nav"> 
-         <a class="navbar-brand" href="#">
-        <img src="pngwing.com.png" width="50" height="50" alt="Logo">
-      </a>
+      <nav id="nav"> 
+        <a id="logo"  href="#">
+       <img src="pngwing.com.png" width="50" height="50" alt="Logo">
+     </a>
 
-        <a class="navbar-brand" href="#" id="name">K-flix</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav" id="ul">
-            <li class="nav-item">
-              <a  class="nav-link" href="home.html" id="home">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="home" href="movies.html">Movies</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="current" href="#">Account</a>
-            </li>
-          </ul>
-          <form class="form-inline" id="section">
-            <a class="nav-link" id="user" href="#"><i  class='bi-person-circle'></i></a>
-            </form>
-        </div>
-      </nav> 
+       <a href="#" id="name">Kflix</a>
+       <!-- <button>
+       </button> -->
+       <div id="navbarNavDropdown">
+         <ul  id="ul">
+           <li>
+             <a  href="home.html" id="home">Home </a>
+           </li>
+           <li>
+             <a id="home" href="movies.html">Movies</a>
+           </li>
+           <li>
+             <a id="current" href="#">Account</a>
+           </li>
+           <li>
+           <a id="user" href="#"><i  class='bi-person-circle'></i></a>
+         </li>
+         </ul>
+         <!-- <form id="section"> -->
+           <!-- </form> -->
+           <!-- <div class="menu-icon" onclick="menutoggle()"><i  class='bi-list'></i></div> -->
+           
+         </div>
+         <span id="click" onclick="menutoggle()"><i  class='bi-list'></i></span>
+       </nav> 
+       
 </header>
 
 <section >
@@ -96,6 +101,21 @@
   function preLoaderHandler(){
   preloader.style.display = "none";
   }
+</script>
+<script>
+  var menuitems= document.getElementById("ul")
+
+menuitems.style.maxHeight= "0px";
+
+function menutoggle(){
+// alert("hello")
+ if(menuitems.style.maxHeight == "0px")
+ {
+     menuitems.style.maxHeight= "200px";
+ }else{
+     menuitems.style.maxHeight= "0px";
+ }
+}
 </script>
 <script src="script.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>

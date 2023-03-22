@@ -7,7 +7,7 @@
 
 body {
   height: 100vh;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   background: #161616;
   font-family: 'Poppins', sans-serif;
 }
@@ -38,17 +38,36 @@ button:hover{
 #nav:after{
   background-color: #161616;
 }
-
+#click{
+  cursor: pointer;
+  visibility: hidden;
+}
 #name{
     font-family: 'Playball', cursive;
     font-weight: bold;
+    color: #fff;
     font-size: 2.5vw;
-    margin-left: 1rem;
+    /* padding-right: 5vw; */
+    position: absolute;
+    margin-left: 12vw;
 }
 #ul{
-    position: relative;
+    /* position: relative;
     left: 25vw;
-    font-size: 1.3vw;
+    font-size: 1.3vw; */
+    margin-left: 25vw;
+    margin-top: 2.4vh;
+    display: flex;
+    flex-direction: row;
+    /* margin: 5vw; */
+}
+a{
+  text-decoration: none;
+}
+li{
+  margin-left: 4vw;
+  list-style-type: none;
+  margin-right: 2vw;
 }
 #logo{
   margin-left: 1rem;
@@ -93,6 +112,10 @@ button:hover{
   color: #e25428;
   margin-left: 20rem;
   font-size: 3rem;
+  margin-top: -10vh;
+}
+#use{
+  /* margin-b: 6vh; */
 }
 
 #btn{
@@ -214,38 +237,38 @@ header section article{
 }
 
 @media only screen and (max-width:992px) {
-  #ul{
+  /* #ul{
     z-index: 9999;
     font-size: 1rem;
     position: relative;
     left: 0;
     right: 0;
     background-color: #333333c0;   
-  }
-  #section{
+  } */
+  /* #section{
     display: none;
-  }
+  } */
  
 }
 
 
 @media only screen and (max-width:768px) {
 
-  #section{
+  /* #section{
     display: none;
-  }
+  } */
   
   #nav{
     background-color: #080808c7;
   }  
 
-  #ul{
+  /* #ul{
     z-index: 9999;
     font-size: 1rem;
     position: relative;
     left: 0;
     background-color: #080808c7;    
-  }
+  } */
 
   .headerbg{
     background-color: rgba(0, 0, 0, 0.377);
@@ -542,6 +565,18 @@ form button{
     position: absolute;
     left: 25%;
   }
+  #click{
+    position: relative;
+    margin-left: 35vw;
+    font-size: 10vw;
+    margin-top: 1vh;
+    visibility: visible;
+  }
+  #name{
+    position: absolute;
+    margin-top: 2.6vh;
+    margin-left: 20vw;
+  }
 }
 #categories{
   position: relative;
@@ -616,14 +651,14 @@ form button{
   #user{
     display: none;
   }
-  #ul{
+  /* #ul{
     position: relative;
     left: 50vw;
-  }
-  #name{
+  } */
+  /* #name{
     position: relative;
     left: 30vw;
-  }
+  } */
 }
 @media only screen and (max-width:992px) {
   #name{
@@ -679,6 +714,35 @@ form button{
   transition: 0.5s;
 }
 @media only screen and (max-width:605px) {
+  nav{
+    margin-right: 3vw;
+    width: 100vw;
+  }
+  nav #ul{
+    position: absolute;
+    /* top: 70px; */
+    margin-top: 9vh;
+    left: 0;
+    /* right: 0; */
+    display: flex;
+    flex-direction: column;
+    background-color: #161616;
+    width: 100vw;
+    margin-left: -3vw;
+    z-index: 999;
+    overflow: hidden;
+    transition: max-height 0.5s;
+}
+nav #ul li{
+    display: block;  
+    margin-right: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+nav #ul li a{
+    color: #fff;
+     
+}
   #movies img{
     width: 15rem;
     height: 15rem;
