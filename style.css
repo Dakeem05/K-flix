@@ -7,7 +7,7 @@
 
 body {
   height: 100vh;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
   background: #161616;
   font-family: 'Poppins', sans-serif;
 }
@@ -21,11 +21,12 @@ header{
   height: 100vh;
   background: #161616db url("load.gif") no-repeat center;
   z-index: 999;
-
+  
 }
 #nav{
+  overflow-x: hidden;
   display: flex;
-  max-height: 4rem;
+  height: 4rem;
   background-color: #333333c0;
   overflow-y: hidden;
 
@@ -40,22 +41,27 @@ button:hover{
 }
 #click{
   cursor: pointer;
+  color: #fff;
   visibility: hidden;
 }
 #name{
     font-family: 'Playball', cursive;
     font-weight: bold;
     color: #fff;
-    font-size: 2.5vw;
+    font-size: 2vw;
+    margin-top: 1vh;
     /* padding-right: 5vw; */
     position: absolute;
     margin-left: 12vw;
+}
+#img{
+  object-fit: cover;
 }
 #ul{
     /* position: relative;
     left: 25vw;
     font-size: 1.3vw; */
-    margin-left: 25vw;
+    margin-left: 20vw;
     margin-top: 2.4vh;
     display: flex;
     flex-direction: row;
@@ -111,8 +117,9 @@ li{
   position: relative;
   color: #e25428;
   margin-left: 20rem;
-  font-size: 3rem;
-  margin-top: -10vh;
+  font-size: 3vw;
+  /* padding-top: 4vh; */
+  top: -2.5vh;
 }
 #use{
   /* margin-b: 6vh; */
@@ -634,10 +641,17 @@ form button{
   }
 
 }
-
+#account_footer{
+  position: absolute;
+  /* margin-top: 30vh; */
+  top: 99;
+}
 @media only screen and (max-width:1200px) {
   body{
     overflow-x: hidden;
+  }
+  #ul{
+    margin-left: 20vw;
   }
   .headerbg{
     background-color: rgba(0, 0, 0, 0.377);
@@ -721,13 +735,15 @@ form button{
   nav #ul{
     position: absolute;
     /* top: 70px; */
-    margin-top: 9vh;
+    margin-top: 4rem;
     left: 0;
     /* right: 0; */
+    /* padding-left: -15vw; */
     display: flex;
     flex-direction: column;
-    background-color: #161616;
+    background-color: rgba(0, 0, 0, 0.377);
     width: 100vw;
+    /* width: 100%; */
     margin-left: -3vw;
     z-index: 999;
     overflow: hidden;
